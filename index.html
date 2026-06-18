@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Eyes AI // VISION_OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">VIRTUAL EYES <span class="nav-logo-os">// VISION_OS</span></div>
+  <ul class="nav-links">
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#jarvis-ai">VIP Interceptor</a></li>
+    <li><a href="#safety-protocols">Safety Protocols</a></li>
+    <li><a href="#studio-hardware">Hardware Specs</a></li>
+    <li><a href="#logs">Logs</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="hw-selector">
+      <select id="cameraSelect">
+        <option>⬤ Default Webcam</option>
+        <option>⬤ External Lens #1</option>
+      </select>
+    </div>
+    <div class="dev-badge">System Architect: <span>Rudra Anand</span></div>
+    <div class="status-dot-wrap"><span class="status-dot"></span><span class="status-dot-label">ONLINE</span></div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">System Online · All Modules Active</div>
+    <h1 class="hero-title">Absolute Environmental<br>Awareness.</h1>
+    <p class="hero-sub">Hardware-accelerated tracking, localized facial recognition, and continuous spatial intelligence — running entirely in your browser. Built to be the ultimate hands-free vision companion.</p>
+
+    <div class="model-router">
+      <div class="model-router-label">Active Model Router</div>
+      <div class="slider-track">
+        <span class="slider-label active" id="label-left">COCO-SSD</span>
+        <input type="range" min="0" max="1" step="1" value="0" id="modelSlider">
+        <span class="slider-label" id="label-right">YOLOv8</span>
+      </div>
+    </div>
+    
+      <a href="../Main_detection/html.html" class="cta-button">
+        Get started 🚀
+      </a>
+
+    <div class="hero-stats">
+      <div class="stat-chip cyan">WebGL Accelerated</div>
+      <div class="stat-chip violet">WASM Threads Active</div>
+      <div class="stat-chip green">Face API Loaded</div>
+      <div class="stat-chip cyan">Browser-Native · Zero Cloud</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="architecture">
+  <div class="section-inner">
+    <div class="section-eyebrow">Core Architecture</div>
+    <h2 class="section-title">The Engine<br>Under the Hood</h2>
+    <p class="section-desc">Three foundational layers work in parallel, each decoupled, each purpose-built for zero-lag local inference.</p>
+
+    <div class="arch-grid">
+      <div class="arch-card" style="--card-accent: linear-gradient(90deg, #00e5ff, #0077ff);">
+        <span class="card-icon">🚀</span>
+        <div class="card-title">The Dual-Model Engine</div>
+        <div class="card-status active">Active Local Inference</div>
+        <p class="card-body">The core routing layer seamlessly swaps between two massive frameworks without dropping the video feed.</p>
+        <ul class="card-bullets">
+          <li><strong>COCO-SSD:</strong> Lightning-fast bounding box tracking for 80 standard categories via TensorFlow.js</li>
+          <li><strong>ONNX YOLOv8:</strong> Deep-structural analysis fetching 600 classes from Open Images v7</li>
+        </ul>
+        <div class="card-metric"><code>ort.env.wasm.numThreads = 1</code>&nbsp;· WebGL + WASM</div>
+      </div>
+
+      <div class="arch-card" style="--card-accent: linear-gradient(90deg, #7c3aed, #a78bfa);">
+        <span class="card-icon">📐</span>
+        <div class="card-title">Spatial & Distance Mapping</div>
+        <div class="card-status trigger">Spacebar Triggered</div>
+        <p class="card-body">A customized mathematical engine that converts 2D pixels into physical reality using strict metric focal ratios.</p>
+        <ul class="card-bullets">
+          <li>Evaluates object center coordinates against calibrated focal ratios</li>
+          <li>Compiles visual metadata cards with exact meter/centimeter distances</li>
+          <li>Automated bulk audio readouts of the environment layout</li>
+        </ul>
+        <div class="card-metric"><code>FOCAL_LENGTH_PX = 700</code>&nbsp;· Metric Calibrated</div>
+      </div>
+
+      <div class="arch-card" style="--card-accent: linear-gradient(90deg, #00ff88, #00ccaa);">
+        <span class="card-icon">🗄️</span>
+        <div class="card-title">Automated Data Logging</div>
+        <div class="card-status continuous">Continuous Tracking Matrix</div>
+        <p class="card-body">Cross-cycle matrix tracking captures structural changes in the room and exports them to timestamped local files.</p>
+        <ul class="card-bullets">
+          <li>Exports lightweight <code style="color:var(--accent-cyan)">detection_YYYY-MM-DD.txt</code> logs locally</li>
+          <li>Arrays reset on-the-fly for clean continuous runs</li>
+          <li>Structural diff tracking across detection cycles</li>
+        </ul>
+        <div class="card-metric">Output: <code>detection_2026-06-18.txt</code>&nbsp;· Auto-timestamped</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="jarvis-ai">
+  <div class="section-inner">
+    <div class="section-eyebrow">VIP Facial Recognition Layer</div>
+    <h2 class="section-title gradient-text-violet">Face Interceptor<br>Active</h2>
+    <p class="section-desc">Unlike generic cloud scanners, the Face VIP Interceptor runs completely parallel to the main object scanner with strict CPU-throttling to prevent resource depletion.</p>
+
+    <div class="face-layout">
+      <div>
+        <p class="card-body" style="margin-bottom:1.5rem; font-size:0.9rem;">When COCO-SSD detects a generic "person," the neural network intercepts the frame. It extracts feature vector encodings, cross-references them against localized vector folders, and instantly overwrites the generic label with the mapped identity.</p>
+
+        <div class="threshold-bar">
+          <div class="threshold-label">CONFIDENCE THRESHOLD · MINIMUM MATCH FLOOR</div>
+          <div class="threshold-track"><div class="threshold-fill"></div></div>
+          <div class="threshold-value">60% · Strict Identity Gate</div>
+        </div>
+
+        <div class="id-matrix">
+          <div class="id-row">
+            <div class="id-indicator"></div>
+            <span class="id-code">ID_01</span>
+            <span class="id-name">Rudra</span>
+            <span class="id-confidence">96.2% · MAPPED</span>
+          </div>
+          <div class="id-row">
+            <div class="id-indicator"></div>
+            <span class="id-code">ID_02</span>
+            <span class="id-name">Deepa</span>
+            <span class="id-confidence">94.7% · MAPPED</span>
+          </div>
+          <div class="id-row">
+            <div class="id-indicator"></div>
+            <span class="id-code">ID_03</span>
+            <span class="id-name">Rakesh</span>
+            <span class="id-confidence">91.3% · MAPPED</span>
+          </div>
+        </div>
+
+        <div class="card-metric" style="margin-top:1.2rem;"><code>@vladmandic/face-api</code> · 1000ms CPU Cooldown · Parallel Thread</div>
+      </div>
+
+      <div class="face-visual">
+        <div class="face-ring"></div>
+        <div class="face-ring"></div>
+        <div class="face-ring"></div>
+        <div class="face-center">
+          <span class="face-emoji">👤</span>
+          <span class="face-caption">Interceptor Online</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="safety-protocols">
+  <div class="section-inner">
+    <div class="section-eyebrow">Security & Cloud Utilities</div>
+    <h2 class="section-title gradient-text-red">Threat Validation<br>& Cloud Overrides</h2>
+    <p class="section-desc">Two distinct systems: a silent background perimeter guard, and manual high-fidelity cloud overrides for complex scene analysis.</p>
+
+    <div class="safety-grid">
+      <div class="safety-card threat">
+        <span class="safety-icon">🚨</span>
+        <div class="safety-title">Background Perimeter Threat Validator</div>
+        <div class="safety-subtitle">Silent 700ms Polling Loop · Decoupled Thread</div>
+        <p class="safety-body">Dedicated to physical safety. Targets high-mass moving hazards and responds with overlaid visual warnings and emergency audio alerts.</p>
+        <div class="param-grid">
+          <div class="param-item">
+            <div class="param-label">Targets</div>
+            <div class="param-value">Cars · Trucks · Motos</div>
+          </div>
+          <div class="param-item">
+            <div class="param-label">Poll Interval</div>
+            <div class="param-value">700ms</div>
+          </div>
+          <div class="param-item">
+            <div class="param-label">Alert Cooldown</div>
+            <div class="param-value">5000ms</div>
+          </div>
+          <div class="param-item">
+            <div class="param-label">Response</div>
+            <div class="param-value">Crimson + Max Vol</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="safety-card cloud">
+        <span class="safety-icon">☁️</span>
+        <div class="safety-title">Remote Cloud Utilities</div>
+        <div class="safety-subtitle">Manual Keystroke Overrides · High-Fidelity</div>
+        <p class="safety-body">Manual, high-fidelity overrides for complex scene analysis and dense text extraction from the environment.</p>
+        <div class="key-list">
+          <div class="key-entry">
+            <span class="key-trigger">T</span>
+            <span><strong style="color:var(--text-primary)">High-Res OCR</strong> — Optimizes pipeline to image/jpeg 0.95 quality for dense verbatim text extraction</span>
+          </div>
+          <div class="key-entry">
+            <span class="key-trigger">S</span>
+            <span><strong style="color:var(--text-primary)">Cloud Scene Layout</strong> — Transmits high-fidelity snapshot for detailed breakdown of context</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="studio-hardware">
+  <div class="section-inner">
+    <div class="section-eyebrow">Deployment Specs</div>
+    <h2 class="section-title">Hardware & Setup Requirements</h2>
+    <p class="section-desc">Details regarding the physical layout and monitoring setup required to run VISION_OS optimally.</p>
+
+    <div class="hw-layout">
+      <div class="hw-card" style="--hw-accent: linear-gradient(90deg, #00ff88, #00ccaa);">
+        <span class="hw-card-icon">📚</span>
+        <div class="hw-card-title">Home-Studio Board Prep</div>
+        <p class="hw-card-body">Strictly confined to home use. Perimeter monitoring keeps you focused while OCR extracts textbook diagrams.</p>
+        <span class="hw-tag">Local Study Companion · Active</span>
+      </div>
+      <div class="hw-card" style="--hw-accent: linear-gradient(90deg, #60a5fa, #3b82f6);">
+        <span class="hw-card-icon">📷</span>
+        <div class="hw-card-title">Dynamic Camera Swap</div>
+        <p class="hw-card-body">Seamlessly swap between your built-in webcam and external tracking lenses on the fly via the nav hardware selector.</p>
+        <span class="hw-tag">Hot-Swap · No Feed Drop</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="logs">
+  <div class="section-inner">
+    <div class="section-eyebrow">System Logs</div>
+    <h2 class="section-title">Detection Matrix Output</h2>
+    <div class="log-terminal">
+      <div class="terminal-header">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">detection_LIVE.txt</span>
+      </div>
+      <div class="terminal-body" id="logBody">
+        <div class="log-line"><span class="log-time">08:42:01</span><span class="log-level info">INFO</span><span class="log-msg">System initialized · COCO-SSD loaded</span></div>
+        <div class="log-line" id="lastLine"><span class="log-time" id="liveTime">08:43:21</span><span class="log-level ok">OK</span><span class="log-msg">Detection matrix nominal <span class="blink">▮</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bottom" style="margin-top:0; border:none;">
+    <div class="footer-copy">VIRTUAL EYES AI // VISION_OS · System Architect: <span>Rudra Anand</span> · All inference local</div>
+    <div class="footer-copy" style="color:var(--text-dim);">Browser-native · No cloud required</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

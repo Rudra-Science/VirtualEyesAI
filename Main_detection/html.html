@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Eyes AI // Detection Matrix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="detection.css">
+</head>
+<body>
+
+  <!-- ── SCANLINE OVERLAY via CSS ── -->
+
+  <header class="header">
+    <div class="header-left">
+      <div class="header-logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="3.5" stroke="#00ffe7" stroke-width="1.5"/>
+          <path d="M2 12C2 12 5 5 12 5s10 7 10 7-3 7-10 7S2 12 2 12Z" stroke="#00ffe7" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="1" fill="#00ffe7"/>
+        </svg>
+      </div>
+      <div>
+        <div class="header-title">VIRTUAL EYES AI</div>
+        <div class="header-sub">Detection Matrix · VISION_OS</div>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="header-nav-links">
+        <a href="index.html" class="header-nav-link">← Homepage</a>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div id="statusLine" class="status loading">
+        <span class="status-pip"></span>
+        <span id="statusText">Loading model...</span>
+      </div>
+      <button id="scanBtn" class="btn btn-ghost">⟳ Scan Cameras</button>
+      <div class="dev-badge">System Architect: <span>Rudra Anand</span></div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ── LEFT: LIVE CAMERA FEED ── -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-eyebrow">Screen 1</div>
+        <h2 class="panel-title">Live Camera Feed</h2>
+        <div class="panel-status">
+          <span class="live-dot"></span>
+          <span class="live-label">LIVE</span>
+        </div>
+      </div>
+
+      <div class="video-wrap">
+        <video id="webcam" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <!-- Corner brackets -->
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+        <!-- Scanline flicker on feed -->
+        <div class="feed-scanlines"></div>
+      </div>
+
+      <div class="controls">
+        <button id="startBtn" class="btn btn-primary">⏸ Pause</button>
+
+        <div class="model-toggle-wrapper">
+          <span class="model-toggle-label">Active Model</span>
+          <span id="modelLabel" class="model-name">ONNX (600 Classes)</span>
+          <label class="switch">
+            <input type="checkbox" id="modelToggle" checked>
+            <span class="slider-thumb"></span>
+          </label>
+        </div>
+
+        <button id="scanBtn2" class="btn btn-ghost">⟳ Refresh</button>
+        <select id="cameraSelect" class="select-cam"></select>
+      </div>
+    </div>
+
+    <!-- ── RIGHT: SNAPSHOT ANALYSIS ── -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-eyebrow">Screen 2</div>
+        <h2 class="panel-title">Snapshot Analysis</h2>
+        <div class="panel-status">
+          <span class="ready-dot"></span>
+          <span class="ready-label">READY</span>
+        </div>
+      </div>
+
+      <div class="snapshot-wrap">
+        <canvas id="snapshot" class="snapshot"></canvas>
+        <!-- Corner brackets -->
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+        <div class="snapshot-idle-overlay" id="snapshotIdle">
+          <div class="idle-icon">◎</div>
+          <div class="idle-text">Awaiting Capture</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="takeSnapshot" class="btn btn-primary">◎ Capture</button>
+        <button id="saveData" class="btn btn-violet">⤓ Export Matrix</button>
+      </div>
+
+      <div class="results-panel" id="resultsList">
+        <div class="results-idle">
+          <span class="results-idle-icon">▸</span>
+          Trigger a capture to populate the detection matrix below.
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── DETECTION STRIP FOOTER ── -->
+  <footer class="detected-row">
+    <div class="detected-strip-header">
+      <span class="strip-eyebrow">Object Matrix</span>
+      <span class="strip-count" id="stripCount">0 objects</span>
+    </div>
+    <div id="detectedStrip" class="detected-strip">
+      <div class="strip-idle">No snapshot captured yet — detection data will appear here.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.webgpu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+  <script src="face_ai.js"></script>
+  <script src="app.js"></script>
+  <script src="voice_ai.js"></script>
+
+</body>
+</html>
