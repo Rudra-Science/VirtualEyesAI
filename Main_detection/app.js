@@ -8,7 +8,7 @@
   // ── PROXY URL ────────────────────────────────────────────────────────────────
   // Local dev  → 'http://localhost:3000/api/vision'
   // Vercel     → '/api/vision'
-  const PROXY_URL = 'http://localhost:3000/api/vision';
+  const PROXY_URL = '/api/vision';
   // ─────────────────────────────────────────────────────────────────────────────
 
   let OIV7_CLASSES = Array.from({length: 600}, (_, i) => `object_${i}`); 
